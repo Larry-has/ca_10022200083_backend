@@ -1,0 +1,30 @@
+# Render Blueprint - Backend Deployment Configuration
+# https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: ghanatech-api
+    runtime: node
+    region: oregon
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        sync: false  # Set manually in Render dashboard
+      - key: JWT_SECRET
+        sync: false  # Set manually in Render dashboard
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: FRONTEND_URL
+        value: https://ghanatech.vercel.app
+      - key: PAYSTACK_SECRET_KEY
+        sync: false  # Set manually in Render dashboard
+      - key: PAYSTACK_PUBLIC_KEY
+        sync: false  # Set manually in Render dashboard
+    autoDeploy: true
