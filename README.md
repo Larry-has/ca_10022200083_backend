@@ -1,6 +1,15 @@
 # GhanaTech Store - Backend API
 
+**Student Name:** Lawrence Effah
+**Index Number:** 10022200083
+**Course:** CS/IT4131 - Cloud Applications
+
+---
+
 A Node.js/Express REST API for the GhanaTech E-commerce platform.
+
+**Live API:** https://cataazinbackend.onrender.com
+**Frontend Repo:** https://github.com/Larry-has/ca_10022200083
 
 ## Tech Stack
 
